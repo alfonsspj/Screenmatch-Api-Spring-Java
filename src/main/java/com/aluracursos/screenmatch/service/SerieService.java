@@ -26,6 +26,10 @@ public class SerieService {
         return convierteDatos(repository.findTop5ByOrderByEvaluacionDesc());
     }
 
+    public List<SerieDTO> obtenerLanzamientosMasRecientes(){
+        return convierteDatos(repository.lanzamientoMasReciente());
+    }
+
     // conversion de Serie a SerieDTO
     public List<SerieDTO> convierteDatos(List<Serie> serie){
         return serie.stream()
